@@ -1,0 +1,25 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="simple" targetRuntime="MyBatis3Simple">
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test" userId="root" password="root"/>
+        
+
+        <javaClientGenerator targetPackage="com.scaf.bean.auto.mapper" targetProject="\scaf-tmp-mybatis\src">
+        </javaClientGenerator>
+
+        <javaModelGenerator targetPackage="com.scaf.bean.auto.mapper.bean" targetProject="\scaf-tmp-mybatis\src">
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.scaf.bean.auto.mapper.xml" targetProject="\scaf-tmp-mybatis\src">
+        </sqlMapGenerator>
+
+        <table tableName="qrtz_locks">
+        </table>
+
+    </context>
+</generatorConfiguration>

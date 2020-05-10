@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>scaf</artifactId>
+        <groupId>com.sa.dev</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>scaf-tmp</artifactId>
+
+    <build>
+        <plugins>
+            <!-- MBG的maven插件[mybatis-generator:generate] -->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <!-- 插件依赖 -->
+                <dependencies>
+                    <!-- 依赖当前项目 -->
+                    <dependency>
+                        <groupId>com.sa.dev</groupId>
+                        <artifactId>scaf-tmp</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+                <!-- 为插件的模板配置参数 -->
+                <configuration>
+                    <!-- 打印日志 -->
+                    <verbose>true</verbose>
+                    <!-- 覆盖文件 -->
+                    <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
