@@ -1,4 +1,4 @@
-package com.scaf.admin.test;
+package com.scaf.admin.test.jep;
 
 import org.nfunk.jep.JEP;
 
